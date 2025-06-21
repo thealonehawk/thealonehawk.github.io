@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Hawk</title>
+  <meta name="description" content="My simple & cool website.">
+
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="Free Domains - Curated Collection">
+  <meta itemprop="description" content="My simple & cool website.">
+  <meta itemprop="image" content="https://thealonehawk.github.io/media/hawk.png">
+
+  <!-- Links -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&family=Fira+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {       --primary: #8d5524;      /* Hawk brown */       --secondary: #c68642;    /* Golden tan */       --accent: #e0ac69;       /* Lighter tan */       --feather: #c97a3a;      /* Rusty orange */       --bg1: #fff7ef;       --bg2: #f0e6da;       --glass-bg: rgba(255,247,239,0.92);       --glass-border: rgba(200,160,100,0.22);       --nav-bg: rgba(141,85,36,0.95);       --shadow: 0 8px 32px rgba(141,85,36,0.13);     }     html { scroll-behavior: smooth; }     body {       margin: 0;       background: linear-gradient(120deg, var(--bg1) 0%, var(--bg2) 100%);       min-height: 100vh;       font-family: 'Montserrat', Arial, sans-serif;       color: #442b13;       overflow-x: hidden;     }     /* Animated feather background */     body::before {       content: "";       position: fixed;       top: 0; left: 0; right: 0; bottom: 0;       z-index: -2;       background: repeating-linear-gradient(         135deg,         var(--bg1),         var(--bg1) 220px,         var(--accent) 225px,         var(--bg1) 230px       );       opacity: 0.09;       pointer-events: none;     }     /* Navbar */     nav {       position: sticky;       top: 0;       z-index: 100;       background: var(--nav-bg);       box-shadow: 0 2px 16px rgba(141,85,36,0.10);       display: flex;       justify-content: center;     }     nav ul {       display: flex;       list-style: none;       gap: 2.2em;       margin: 0;       padding: 1em 0;     }     nav a {       color: #fff;       text-decoration: none;       font-weight: 600;       font-size: 1.13em;       letter-spacing: 0.7px;       padding: 0.4em 1.2em;       border-radius: 18px;       position: relative;       transition: background 0.2s, color 0.2s;     }     nav a.active, nav a:hover {       background: var(--secondary);       color: #4b2e08;     }     /* Hero Section */     .hero {       min-height: 95vh;       display: flex;       flex-direction: column;       justify-content: center;       align-items: center;       text-align: center;       background: linear-gradient(120deg, var(--secondary) 0%, var(--bg1) 60%);       position: relative;       z-index: 1;       overflow: hidden;     }     /* Feather SVG for hero background */     .hero::before {       content: "";       position: absolute;       top: 0; left: 0; right: 0; bottom: 0;       background: url('https://svgshare.com/i/13iX.svg') center 90%/700px no-repeat;       opacity: 0.10;       pointer-events: none;       z-index: 0;     }     .glass {       background: var(--glass-bg);       border: 1.5px solid var(--glass-border);       border-radius: 32px;       box-shadow: var(--shadow);       backdrop-filter: blur(14px);       padding: 3.5em 2.4em 2em;       max-width: 410px;       margin-top: 2.7em;       z-index: 1;       position: relative;       animation: fadein 1.3s cubic-bezier(.22,.68,.55,1.25);     }     @keyframes fadein {       from { opacity: 0; transform: translateY(40px) scale(0.97);}       to { opacity: 1; transform: translateY(0) scale(1);}     }     .hero-avatar {       width: 110px; height: 110px;       border-radius: 50%;       border: 4px solid var(--accent);       box-shadow: 0 2px 16px rgba(141,85,36,0.12);       object-fit: cover;       margin-bottom: 1.2em;       transition: transform 0.4s cubic-bezier(.25,.8,.25,1);       background: #fff;     }     .hero-avatar:hover {       transform: scale(1.07) rotate(-5deg);       box-shadow: 0 8px 32px var(--feather);       border-color: var(--feather);     }     .hero h1 {       margin: 0;       font-size: 2.8em;       font-weight: 700;       color: var(--primary);       letter-spacing: 2.5px;       text-shadow: 0 2px 16px rgba(141,85,36,0.12);     }     .hero h3 {       margin: 0.3em 0 1.2em 0;       color: var(--feather);       font-weight: 400;       font-size: 1.1em;       letter-spacing: 1.2px;     }     .socials {       display: flex;       gap: 1.2em;       justify-content: center;       margin-top: 1.2em;     }     .social-icon {       width: 46px; height: 46px;       display: flex;       align-items: center;       justify-content: center;       border-radius: 50%;       background: var(--secondary);       color: var(--primary);       font-size: 1.7rem;       box-shadow: 0 1px 6px rgba(141,85,36,0.11);       transition: background 0.23s, color 0.23s, transform 0.22s;       border: 1.5px solid var(--primary);     }     .social-icon:hover {       background: var(--feather);       color: #fff;       transform: translateY(-5px) scale(1.11);       border-color: var(--feather);       box-shadow: 0 1px 10px var(--feather);     }     /* Section Styling */     section {       max-width: 1000px;       margin: 3.5em auto;       background: rgba(255,247,239,0.97);       border-radius: 22px;       box-shadow: var(--shadow);       padding: 2.4em 2em;       position: relative;       animation: fadein 1.3s cubic-bezier(.22,.68,.55,1.25);       border-left: 8px solid var(--accent);     }     section h2 {       color: var(--primary);       font-size: 2em;       margin: 0 0 1em 0;       letter-spacing: 1.5px;       font-weight: 700;       text-align: left;     }     /* About */     .about-text {       font-size: 1.17em;       line-height: 1.7;       margin-bottom: 0.6em;       text-align: left;     }     /* Skills */     .skills-cards {       display: flex;       flex-wrap: wrap;       gap: 1.5em;       justify-content: center;       margin-top: 1.2em;     }     .skill-card {       flex: 1 1 180px;       max-width: 210px;       min-width: 150px;       background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 90%);       border-radius: 18px;       box-shadow: 0 2px 12px rgba(141,85,36,0.09);       padding: 1.2em 0.8em;       text-align: center;       transition: transform 0.25s, box-shadow 0.23s, background 0.2s;       cursor: pointer;       border: 2.5px solid transparent;       color: var(--primary);     }     .skill-card:hover {       transform: translateY(-8px) scale(1.04) rotate(-2deg);       border-color: var(--feather);       box-shadow: 0 8px 32px var(--accent);       background: linear-gradient(135deg, var(--feather) 0%, var(--accent) 90%);       color: #fff;     }     .skill-card i {       font-size: 2em;       margin-bottom: 0.6em;       color: var(--primary);       transition: color 0.2s;     }     .skill-card:hover i {       color: #fff;     }     .skill-card span {       display: block;       font-size: 1.08em;       font-weight: 600;       color: inherit;     }     /* Contact */     .contact-info {       font-size: 1.13em;       margin: 0.7em 0 1.2em 0;       text-align: left;     }     .contact-links {       display: flex;       gap: 2em;       flex-wrap: wrap;       align-items: center;       margin-top: 1em;     }     .contact-link {       color: var(--primary);       text-decoration: none;       font-weight: 600;       font-size: 1.1em;       display: flex;       align-items: center;       gap: 0.5em;       transition: color 0.2s, background 0.2s;       background: var(--accent);       padding: 0.5em 1.1em;       border-radius: 18px;       border: 1.5px solid var(--primary);     }     .contact-link:hover {       color: #fff;       background: var(--feather);       border-color: var(--feather);     }     /* Footer */     footer {       text-align: center;       padding: 2em 0 1em 0;       font-size: 1.08em;       color: #fff;       letter-spacing: 1px;       background: var(--primary);       margin-top: 3em;       border-radius: 24px 24px 0 0;       box-shadow: 0 -2px 24px rgba(141,85,36,0.12);       font-family: 'Fira Mono', monospace;       background-image: url('https://svgshare.com/i/13iX.svg');       background-repeat: no-repeat;       background-position: right 10% bottom 40%;       background-size: 190px;     }     /* Scroll Animations */     [data-animate] {       opacity: 0;       transform: translateY(40px) scale(0.97);       transition: opacity 0.75s cubic-bezier(.22,.68,.55,1.25), transform 0.75s cubic-bezier(.22,.68,.55,1.25);     }     [data-animate].show {       opacity: 1;       transform: translateY(0) scale(1);     }     /* Responsive */     @media (max-width: 800px) {       section, .glass {         padding: 1.2em 0.7em;       }       .skills-cards {         gap: 0.7em;       }     }     @media (max-width: 600px) {       nav ul { gap: 0.7em; }       .glass { max-width: unset;}       .skills-cards { flex-direction: column; align-items: center; }       .contact-links { flex-direction: column; gap: 1em;}     }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="hero" id="hero">
+    <div class="glass" data-animate>
+      <img src="https://avatars.githubusercontent.com/u/4022631?v=4" alt="hawk avatar" class="hero-avatar">
+      <h1>The Hawk</h1>
+      <h3>Always @alone</h3>
+      <div class="socials">
+        <a class="social-icon" href="https://github.com/thealonehawk" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a class="social-icon" href="mailto:thealonehawk@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+        <!-- Add more socials if you want -->
+      </div>
+    </div>
+  </div>
+  <section id="about" data-animate>
+    <h2>About Me</h2>
+    <p class="about-text">
+      Hi! I’m <b>The Hawk</b>, a passionate developer, open-source lover, and lifelong learner. I thrive on turning creative ideas into real-world projects and exploring the endless possibilities of technology.
+    </p>
+  </section>
+  <section id="skills" data-animate>
+    <h2>Skills &amp; Interests</h2>
+    <div class="skills-cards">
+      <div class="skill-card"><i class="fab fa-js"></i><span>JavaScript</span></div>
+      <div class="skill-card"><i class="fab fa-python"></i><span>Python</span></div>
+      <div class="skill-card"><i class="fas fa-code"></i><span>Web Dev</span></div>
+      <div class="skill-card"><i class="fas fa-brain"></i><span>Machine Learning</span></div>
+      <div class="skill-card"><i class="fas fa-palette"></i><span>UI/UX</span></div>
+      <div class="skill-card"><i class="fas fa-rocket"></i><span>APIs</span></div>
+    </div>
+  </section>
+  <section id="contact" data-animate>
+    <h2>Contact</h2>
+    <div class="contact-info">Let’s connect! Feel free to reach out:</div>
+    <div class="contact-links">
+      <a class="contact-link" href="mailto:thealonehawk@gmail.com" target="_blank"><i class="fas fa-envelope"></i> thealonehawk@gmail.com</a>
+      <a class="contact-link" href="https://github.com/thealonehawk" target="_blank"><i class="fab fa-github"></i> thealonehawk</a>
+    </div>
+  </section>
+  <footer>
+    &copy; 2025 The Hawk &mdash; All rights reserved. 
+  </footer>
+  <script>
+        /* Navbar active link on scroll */    const navLinks = document.querySelectorAll('nav a');     const sections = [document.getElementById('hero'), ...document.querySelectorAll('section')];     window.addEventListener('scroll', () => {       let current = 'hero';       sections.forEach(sec => {         const secTop = sec.offsetTop - 100;         if (window.scrollY >= secTop) current = sec.getAttribute('id');       });       navLinks.forEach(link => {         link.classList.remove('active');         if (link.getAttribute('href') === '#' + current) link.classList.add('active');       });     });     /* On-scroll animations */     function animateOnScroll() {       document.querySelectorAll('[data-animate]').forEach(el => {         const rect = el.getBoundingClientRect();         if (rect.top < window.innerHeight - 80) el.classList.add('show');       });     }     window.addEventListener('scroll', animateOnScroll);     window.addEventListener('load', animateOnScroll);
+  </script>
+</body>
+</html>
