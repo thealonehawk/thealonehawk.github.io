@@ -9,7 +9,7 @@
   <!-- Google / Search Engine Tags -->
   <meta itemprop="name" content="Free Domains - Curated Collection">
   <meta itemprop="description" content="My simple & cool website.">
-  <meta itemprop="image" content="https://thealonehawk.github.io/media/hawk.png">
+  <meta itemprop="image" content="https://thealonehawk.github.io/img/hawk.png">
 
   <!-- Links -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -66,7 +66,7 @@
     </div>
   </section>
   <footer>
-    &copy; 2025 The Hawk &mdash; All rights reserved. 
+    &copy; 2025 hawk &mdash; Made with <span style="color:#e0ac69;font-size:1.2em;">🦅</span> and a sky full of code. 
   </footer>
   <script>
         /* Navbar active link on scroll */    const navLinks = document.querySelectorAll('nav a');     const sections = [document.getElementById('hero'), ...document.querySelectorAll('section')];     window.addEventListener('scroll', () => {       let current = 'hero';       sections.forEach(sec => {         const secTop = sec.offsetTop - 100;         if (window.scrollY >= secTop) current = sec.getAttribute('id');       });       navLinks.forEach(link => {         link.classList.remove('active');         if (link.getAttribute('href') === '#' + current) link.classList.add('active');       });     });     /* On-scroll animations */     function animateOnScroll() {       document.querySelectorAll('[data-animate]').forEach(el => {         const rect = el.getBoundingClientRect();         if (rect.top < window.innerHeight - 80) el.classList.add('show');       });     }     window.addEventListener('scroll', animateOnScroll);     window.addEventListener('load', animateOnScroll);
