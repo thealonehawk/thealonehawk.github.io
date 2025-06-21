@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>404 Not Found | The Hawk</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Fonts -->
+  <!-- Links -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&family=Fira+Mono&display=swap" rel="stylesheet">
   <style>
           :root {       --primary: #8d5524;       --secondary: #c68642;       --accent: #e0ac69;       --feather: #c97a3a;       --bg1: #fff7ef;       --bg2: #f0e6da;       --glass-bg: rgba(255,247,239,0.98);       --glass-border: rgba(200,160,100,0.22);       --shadow: 0 8px 32px rgba(141,85,36,0.13);       --rainbow: linear-gradient(90deg,#ffb347,#ffcc33,#99ff99,#66b3ff,#b366ff,#ff66cc);     }     html { scroll-behavior: smooth; }     body {       margin: 0;       background: linear-gradient(120deg, var(--bg1) 0%, var(--bg2) 100%);       min-height: 100vh;       font-family: 'Montserrat', Arial, sans-serif;       color: #442b13;       overflow-x: hidden;       position: relative;     }      /* Animated floating feathers (emojis) */     .feather-float {       position: fixed;       top: -70px;       left: 50vw;       opacity: 0.33;       pointer-events: none;       animation: featherFall 8s linear infinite;       z-index: 0;       user-select: none;       font-size: 2.3em;       filter: blur(0.2px) drop-shadow(0 2px 2px #e0ac69ac);       width: 1em; height: 1em;       text-shadow: 0 2px 10px #fff8;     }     .feather-float.f2 {left: 15vw; animation-delay: 2s; font-size:1.8em;}     .feather-float.f3 {left: 70vw; animation-delay: 4s; font-size:2.5em;}     .feather-float.f4 {left: 85vw; animation-delay: 1s; font-size:2.1em;}     .feather-float.f5 {left: 30vw; animation-delay: 3.5s; font-size:1.7em;}     .feather-float.f6 {left: 60vw; animation-delay: 5.1s; font-size:2.2em;}     .feather-float.f7 {left: 23vw; animation-delay: 6.2s; font-size:2em;}     @keyframes featherFall {       0% {transform: translateY(0) rotate(-10deg);}       90% {opacity: 0.13;}       100% {transform: translateY(110vh) rotate(25deg);opacity:0;}     }      .container-404 {       display: flex;       flex-direction: column;       align-items: center;       justify-content: center;       min-height: 100vh;       position: relative;       z-index: 1;     }     .glass-404 {       background: var(--glass-bg);       border: 1.5px solid var(--glass-border);       border-radius: 42px;       box-shadow: var(--shadow);       backdrop-filter: blur(14px);       padding: 3em 2.2em 2em;       max-width: 480px;       text-align: center;       position: relative;       animation: fadein 1.2s cubic-bezier(.22,.68,.55,1.25);       margin-top: 2em;       z-index: 2;       transition: box-shadow 0.25s;     }     .glass-404:active {       box-shadow: 0 2px 40px 0 var(--feather), 0 8px 80px 0 var(--accent);     }     @keyframes fadein {       from { opacity: 0; transform: translateY(40px) scale(0.97);}       to { opacity: 1; transform: translateY(0) scale(1);}     }      .hawk-emoji {       font-size: 4.2em;       filter: drop-shadow(0 4px 14px #c97a3a31);       margin-bottom: 0.2em;       animation: hawkFlap 2.5s infinite alternate cubic-bezier(.77,.04,.4,1.94);       cursor: pointer;       user-select: none;       transition: filter 0.22s;     }     .hawk-emoji:hover {       filter: drop-shadow(0 0 22px #e0ac69cc);     }     @keyframes hawkFlap {       0% { transform: rotate(-6deg) scale(1);}       100% { transform: rotate(6deg) scale(1.07);}     }      .error-title {       font-size: 3.3em;       font-weight: 900;       color: var(--primary);       letter-spacing: 3px;       margin: 0 0 0.18em 0;       font-family: 'Montserrat', Arial, sans-serif;       text-shadow: 0 2px 14px rgba(141,85,36,0.12);       user-select: none;     }     .error-message {       font-size: 1.2em;       color: var(--feather);       margin-bottom: 0.95em;       font-weight: 600;       letter-spacing: 1.2px;       display: flex;       align-items: center;       justify-content: center;       gap: 0.4em;     }     .error-desc {       color: #71502b;       font-size: 1.06em;       margin-bottom: 1.7em;       max-width: 350px;       margin-left: auto;       margin-right: auto;       line-height: 1.6;       transition: color 0.2s;       background: rgba(255,245,225,0.5);       border-radius: 13px;       padding: 0.9em 0.6em;       box-shadow: 0 1px 8px #fff5;     }     .tips {       margin: 1.2em 0 1.2em 0;       color: var(--primary);       background: var(--accent);       border-radius: 10px;       font-size: 1.06em;       font-style: italic;       padding: 0.7em 1.2em;       box-shadow: 0 2px 10px #e0ac6920;       display: flex;       align-items: center;       gap: 0.7em;       justify-content: center;     }     .home-link {       display: inline-flex;       align-items: center;       gap: 0.6em;       background: var(--primary);       color: #fff;       font-weight: 700;       font-size: 1.14em;       padding: 0.65em 1.5em;       border-radius: 22px;       text-decoration: none;       box-shadow: 0 2px 14px rgba(141,85,36,0.12);       border: 2px solid var(--accent);       transition: background 0.18s, color 0.18s, transform 0.18s;       margin-top: 0.2em;       letter-spacing: 1px;       outline: none;     }     .home-link:hover, .home-link:focus {       background: var(--feather);       color: #fff;       transform: translateY(-3px) scale(1.04);       border-color: var(--feather);     }     .footer-404 {       text-align: center;       padding: 2em 0 1em 0;       font-size: 1.08em;       color: #fff;       letter-spacing: 1px;       background: var(--primary);       margin-top: 2em;       border-radius: 24px 24px 0 0;       box-shadow: 0 -2px 24px rgba(141,85,36,0.12);       font-family: 'Fira Mono', monospace;       background-image: none;     }     /* Secret Modal */     .secret-modal {       display: none;       position: fixed;       inset: 0;       background: rgba(44,34,24,0.86);       z-index: 9999;       align-items: center;       justify-content: center;       animation: fadein 0.6s;     }     .secret-content {       background: #1c1207;       border-radius: 24px;       color: #ffe5b1;       box-shadow: 0 8px 60px #000a;       max-width: 390px;       width: 98vw;       padding: 2.7em 1.7em 2.2em 1.7em;       text-align: center;       font-family: 'Fira Mono', monospace;       position: relative;       animation: fadein 0.9s;       opacity: 0.98;       letter-spacing: 1.1px;     }     .secret-content h3 {       margin-top: 0;       color: #ffd372;       font-family: 'Montserrat',sans-serif;       font-size: 1.29em;       letter-spacing: 1.4px;     }     .secret-close {       position: absolute;       top: 10px;       right: 22px;       font-size: 1.5em;       cursor: pointer;       color: #ffc96e;       transition: color 0.2s;     }     .secret-close:hover { color: #fff; }     .secret-egg {       font-size: 2em;       margin-bottom: 0.8em;       filter: drop-shadow(0 0 8px #fedc87);       animation: secretPulse 2s infinite alternate;     }     @keyframes secretPulse {       0% {transform: scale(1);}       100% {transform: scale(1.09);}     }     .rainbow-text {       background: var(--rainbow);       -webkit-background-clip: text;       -webkit-text-fill-color: transparent;       font-weight: 800;       font-size: 1.04em;       letter-spacing: 2px;       filter: drop-shadow(0 0 4px #ffe0827a);     }     /* Responsive */     @media (max-width: 600px) {       .glass-404 { max-width: unset; }       .error-title { font-size: 2.1em; }       .hawk-emoji { font-size: 2.7em; }       .secret-content { padding: 1.4em 0.3em; }     }
@@ -74,7 +75,63 @@
     </div>
   </div>
   <script>
-          /* Floating feathers randomize on reload */     document.querySelectorAll('.feather-float').forEach(f=>{       f.style.left = (10 + Math.random()*80) + "vw";       f.style.animationDuration = (7 + Math.random()*3) + "s";     });      /* Secret Modal logic */     const secretModal = document.getElementById('secretModal');     const closeSecret = document.getElementById('closeSecret');     function showSecret() {       secretModal.style.display = "flex";     }     function hideSecret() {       secretModal.style.display = "none";     }     closeSecret.onclick = hideSecret;     secretModal.onclick = (e) => { if(e.target === secretModal) hideSecret(); }      /* Hawk emoji click & glass double-click => reveal secret */     document.getElementById('hawkEmoji').onclick = showSecret;     document.getElementById('egg-box').ondblclick = showSecret;      /* Konami code detection */     const konami = [38,38,40,40,37,39,37,39,66,65];     let kIndex = 0;     window.addEventListener('keydown', function(e){       if(e.keyCode === konami[kIndex]) {         kIndex++;         if(kIndex === konami.length) {           showSecret();           kIndex = 0;         }       } else {         kIndex = 0;       }     });      /* Typing "hawk" triggers secret */     let typeBuffer = '';     window.addEventListener('keydown', function(e){       if(e.key.length === 1) {         typeBuffer += e.key.toLowerCase();         if(typeBuffer.length > 10) typeBuffer = typeBuffer.slice(-10);         if(typeBuffer.includes('hawk')) {           showSecret();           typeBuffer = '';         }       }     });      /* Console easter egg */     setTimeout(()=>{       if(window.console){         console.log('%c🦅 You are a true hawk. Here is your flag:', 'color:#c97a3a;font-size:1.3em;');         console.log('%cFLAG-{404s_are_for_the_birds}', 'background: #8d5524; color: #fff7ef; font-size:1.1em; padding:2px 12px; border-radius:7px;');         console.log('%cPsst: Try clicking the hawk or typing "hawk" or the Konami code!', 'color:#e0ac69;');       }     }, 1800);
+    /* Floating feathers randomize on reload */
+    document.querySelectorAll('.feather-float').forEach(f=>{
+      f.style.left = (10 + Math.random()*80) + "vw";
+      f.style.animationDuration = (7 + Math.random()*3) + "s";
+    });
+
+    /* Secret Modal logic */
+    const secretModal = document.getElementById('secretModal');
+    const closeSecret = document.getElementById('closeSecret');
+    function showSecret() {
+      secretModal.style.display = "flex";
+    }
+    function hideSecret() {
+      secretModal.style.display = "none";
+    }
+    closeSecret.onclick = hideSecret;
+    secretModal.onclick = (e) => { if(e.target === secretModal) hideSecret(); }
+
+    /* Hawk emoji click => reveal secret */
+    document.getElementById('hawkEmoji').onclick = showSecret;
+
+    /* Konami code detection */
+    const konami = [38,38,40,40,37,39,37,39,66,65];
+    let kIndex = 0;
+    window.addEventListener('keydown', function(e){
+      if(e.keyCode === konami[kIndex]) {
+        kIndex++;
+        if(kIndex === konami.length) {
+          showSecret();
+          kIndex = 0;
+        }
+      } else {
+        kIndex = 0;
+      }
+    });
+
+    /* Typing "hawk" triggers secret */
+    let typeBuffer = '';
+    window.addEventListener('keydown', function(e){
+      if(e.key.length === 1) {
+        typeBuffer += e.key.toLowerCase();
+        if(typeBuffer.length > 10) typeBuffer = typeBuffer.slice(-10);
+        if(typeBuffer.includes('hawk')) {
+          showSecret();
+          typeBuffer = '';
+        }
+      }
+    });
+
+    /* Console easter egg */
+    setTimeout(()=>{
+      if(window.console){
+        console.log('%c🦅 You are a true hawk. Here is your flag:', 'color:#c97a3a;font-size:1.3em;');
+        console.log('%cFLAG-{404s_are_for_the_birds}', 'background: #8d5524; color: #fff7ef; font-size:1.1em; padding:2px 12px; border-radius:7px;');
+        console.log('%cPsst: Try clicking the hawk or typing "hawk" or the Konami code!', 'color:#e0ac69;');
+      }
+    }, 1800);
   </script>
 </body>
 </html>
